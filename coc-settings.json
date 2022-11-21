@@ -1,0 +1,17 @@
+{
+    /* 自动补全每天更新 */
+    "coc.preferences.extensionUpdateCheck": "daily",
+
+    /* 按回车不直接选择第一行作为补全 */
+    "suggest.noselect": true, 
+    "suggest.enablePreselect": false,
+
+    /*  coc-explorer */
+    "explorer.position": "floating",
+    "explorer.floating.border.title": "|==> EXPLORER <==|" ,
+    "explorer.openAction.strategy": "select",
+
+    // "clangd.fallbackFlags": ["-std=c++11"],
+    "clangd.checkUpdates": true,
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.1/clangd_15.0.1/bin/clangd"
+}
