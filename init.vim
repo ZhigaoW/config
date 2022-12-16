@@ -1,12 +1,20 @@
+if exists("g:neovide")
+    let g:neovide_refresh_rate = 60
+endif
+
+
 map S :w<CR>
 map Q :q<CR>
 
 au ColorScheme * hi Normal ctermbg=None " This line made the background color not looks gray
 
-syntax on
+
+set mouse=a
+
+syntax off
 set number
 set relativenumber
-" set cursorline
+set cursorline
 set showcmd
 set ignorecase
 
@@ -41,8 +49,11 @@ nnoremap <S-TAB> :bprevious<CR>
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
     "== 外观
         Plug 'vim-airline/vim-airline'
+
         Plug 'morhetz/gruvbox'
         Plug 'phanviet/vim-monokai-pro'
+        Plug 'ajmwagar/vim-deus'
+
     "== 智能补全
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
     "== 标签
@@ -63,10 +74,12 @@ call plug#end()
 " ===
 " === begin [gruvbox]
 " ===
+
+
 " let g:gruvbox_contrast_dark = 'hard'
 " let g:gruvbox_italic = '1'
 " colorscheme gruvbox
-"
+
 " ===
 " === end [gruvbox]
 " ===
@@ -76,16 +89,36 @@ call plug#end()
 " === begin [monokai-pro]
 " ===
 
-set termguicolors
-colorscheme monokai_pro
-let g:lightline = {
-      \ 'colorscheme': 'monokai_pro',
-      \ }
+" set termguicolors
+" colorscheme monokai_pro
+" let g:lightline = {
+"       \ 'colorscheme': 'monokai_pro',
+"       \ }
 
 " ===
 " === end [monokai-pro]
 " ===
 
+
+
+
+" ===
+" === begin [monokai-pro]
+" ===
+
+set t_Co=256
+set termguicolors
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+set background=dark    " Setting dark mode
+colorscheme deus
+let g:deus_termcolors=256
+
+" ===
+" === end [monokai-pro]
+" ===
 
 
 
