@@ -157,8 +157,10 @@ let g:deus_termcolors=256
     let g:airline_symbols.notexists = '∄'
     let g:airline_symbols.whitespace = 'Ξ'
 
-    " Theme ( github.com/vim-airline/vim-airline-themes
-    let g:airline_theme= 'gruvbox'
+" Theme ( github.com/vim-airline/vim-airline-themes
+"    let g:airline_theme= 'gruvbox'
+
+
 " ===
 " === end [airline]
 " ===
@@ -294,6 +296,28 @@ let g:mkdp_theme = 'light'
 
 nnoremap <silent> <c-q> :FloatermToggle<CR>
 tnoremap <silent> <c-q> <C-\><C-n>:FloatermToggle<CR>
+let g:floaterm_width = 0.9
+let g:floaterm_height = 0.7
+" Configuration example
+
+" Set floaterm window's background to black
+"   hi Floaterm guibg=white
+" Set floating window border line color to cyan, and background to orange
+"   hi FloatermBorder guibg=black guifg=cyan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 " ===
 " === end [floaterm]
